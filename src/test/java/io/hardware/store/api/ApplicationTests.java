@@ -1,4 +1,4 @@
-package io.recruitment.assessment.api;
+package io.hardware.store.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
