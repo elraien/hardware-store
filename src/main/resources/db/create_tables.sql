@@ -72,14 +72,14 @@ values (DEFAULT, 1, 2, 1000, quantity*product_price, 1),
 create TABLE orders
 (
     order_id   INT PRIMARY KEY auto_increment,
-    orderDate  timestamp NOT NULL DEFAULT NOW(),
+    order_date  timestamp NOT NULL DEFAULT NOW(),
     user_id_fk int,
     cart_id_fk int,
     FOREIGN KEY (user_id_fk) REFERENCES users (user_id) ON DELETE CASCADE,
     FOREIGN KEY (cart_id_fk) REFERENCES carts (cart_id) ON DELETE CASCADE
 );
 
-insert into orders (order_id, orderDate, user_id_fk, cart_id_fk)
+insert into orders (order_id, order_date, user_id_fk, cart_id_fk)
 values (DEFAULT, DEFAULT, 2, 2),
        (DEFAULT, DEFAULT, 1, 1),
        (DEFAULT, DEFAULT, 1, 1);
